@@ -185,7 +185,7 @@ class BrowserView:
             self.webview.get_inspector().show()
         else:
             
-            self.webview.connect('context-menu', lambda a, b, c, d: False)  # Disable context menu
+            self.webview.connect('context-menu', a=False, b=False, c=False, d=False)  # Disable context menu
 
         if _settings['private_mode']:
             webkit_settings.enable_html5_database = False
